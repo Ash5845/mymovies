@@ -11,8 +11,8 @@ const getLocalStorage = () => {
   }
 };
 
-const url = "http://api.tvmaze.com/search/shows?q=";
-const watchlistUrl = "http://api.tvmaze.com/shows/";
+const url = "https://api.tvmaze.com/search/shows?q=";
+const watchlistUrl = "https://api.tvmaze.com/shows/";
 const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
