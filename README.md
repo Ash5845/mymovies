@@ -1,3 +1,4 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d1c9f860-5a93-421a-ab34-1f2be0ab25fa/deploy-status)](https://app.netlify.com/sites/my-movies-site/deploys)
 # MyMovies
 
 This project has been created using React.
