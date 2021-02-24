@@ -147,48 +147,85 @@ Navbar
 */
 .navbar {
   background: var(--mainBackground);
-  color: var(--primaryColor);
-  height: 5rem;
+  box-shadow: var(--light-shadow);
+  border-bottom: 2px solid var(--primaryColor);
+}
+.nav-header {
   display: flex;
   align-items: center;
-  border-bottom: 2px solid var(--primaryColor);
-  box-shadow: var(--lightShadow);
+  justify-content: space-between;
+  padding: 1rem;
 }
-.navbar li a {
+.nav-toggle {
+  font-size: 1.5rem;
+  color: var(--primaryColor);
+  background: transparent;
+  border-color: transparent;
+  transition: var(--mainTransition);
   cursor: pointer;
 }
-.nav-center {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: var(--smallWidth);
-  margin: 0 auto;
-  max-width: var(--fullWidth);
-}
-.nav-links {
-  display: flex;
-  align-items: center;
-}
-.nav-links a {
-  text-transform: capitalize;
-  display: inline-block;
-  font-weight: bold;
-  margin-right: 0.5rem;
-  font-weight: 400;
-  letter-spacing: 2px;
-  font-size: 1.2rem;
-  padding: 0.25rem 0.5rem;
-  transition: var(--mainTransition);
+.nav-toggle:hover {
   color: var(--primaryColor);
-}
-.nav-links a:hover {
-  color: var(--mainWhite);
+  transform: rotate(90deg);
 }
 .logo {
   margin: auto 0;
   width: 12rem;
   color: var(--primaryColor);
 }
+.links a {
+  color: var(--primaryColor);
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  letter-spacing: var(--mainSpacing);
+  display: block;
+  padding: 0.5rem 1rem;
+  transition: var(--mainTransition);
+}
+.links a:hover {
+  background: #333;
+  color: var(--mainWhite);
+  padding-left: 1.5rem;
+}
+.links-container {
+  height: 0;
+  overflow: hidden;
+  transition: var(--mainTransition);
+}
+.show-container {
+  height: 10rem;
+}
+@media screen and (min-width: 800px) {
+  .nav-center {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+  .nav-header {
+    padding: 0;
+  }
+  .nav-toggle {
+    display: none;
+  }
+  .links-container {
+    height: auto !important;
+  }
+  .links {
+    display: flex;
+  }
+  .links a {
+    padding: 0;
+    margin: 0 0.5rem;
+  }
+  .links a:hover {
+    padding: 0;
+    background: transparent;
+  }
+}
+
 /* 
 ====== 
 Footer
